@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    environment:
+      - OPENWEATHERMAP_API_KEY=4d01256b89f4db3e8cfe1396f6988cc5
+    ports:
+      - "5000:5000"  # Maps container's port 5000 to host's port 5000
+    volumes:
+      - ./app:/app  # Ensures any database file generated stays in the app folder
